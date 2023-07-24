@@ -103,19 +103,6 @@ span{
     /* animation: floatImage 4s ease-in-out infinite; */
 }
 
-/* @keyframes floatImage{
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-2.4rem);
-    }
-    100%{
-        transform: translateY(100);
-    }
-
-} */
-
 .home-content p {
     font-size: 1.6rem;
     text-align: justify;
@@ -141,109 +128,53 @@ span{
     box-shadow: 0 0 1rem var(--main-color);
 }
 
-.btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    color: var(--second-bg-color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    transition: .5s ease;
-}
-
-.btn:hover{
-    box-shadow: none;
-}
-
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    background: var(--second-bg-color);
-}
-
-.about-img img{
-    width: 35vw;
-}
-
 .heading{
     text-align: center;
     font-size: 4.5rem;
 }
 
-.about-content h2{
-    text-align: left;
-    line-height: 1.2;
-}
 
-.about-content h3{
-    font-size: 2.6rem;
-}
 
-.about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+
+
+
+
+.services{
+    background: var(--second-bg-color);
 }
 
 .services h2{
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .services-container{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 0.5rem;
 }
+
 
 .services-container .services-box{
     position: relative;
-    flex: 1 1 30rem;
-    background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
     overflow: hidden;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
 }
 
-.services-container .services-box:hover{
-    border-color: var(--main-color);
-    transform: scale(1.02);
-
-}
-
-.services-container .services-box .icones{
-    filter: invert(100%);
-    height: 50px;
-}
-
-.services-box i {
-    font-size: 7rem;
-    color: var(--main-color);
-}
-
-.services-box h3 {
-    font-size: 2.6rem;
-    
-}
-.services-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;   
+.services-box img{
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
 }
 
 
-
-
-
-
-
+.services-box h4{
+    font-size: 1.5rem;
+    padding: 2rem;
+}
 
 .services-box .services-layer{
     position: absolute;
@@ -251,7 +182,8 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(var(--second-bg-color), var(--bg-color));
+    border-radius: 2rem;
+    background: linear-gradient(rgba(0,0,0, .3), var(--bg-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,91 +199,56 @@ span{
 }
 
 .services-layer p{
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin: .3rem 0 1rem;
-    text-align: center;
 }
 
 
 
 
 
-.portfolio{
-    background: var(--second-bg-color);
+
+.services2{
+    background: var(--bg-color);
 }
 
-.portfolio h2{
+.services2 h2{
     margin-bottom: 4rem;
 }
 
-.portfolio-container{
+.services2 .services-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 2.5rem;
+    gap: 0.5rem;
 }
 
-.portfolio-container .portfolio-box{
+
+.services2 .services-container .services-box{
     position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
 }
 
-.portfolio-box img{
-    width: 100%;
-    transition: .5s ease;
-}
-
-.portfolio-box:hover img{
-    transform: scale(1.1);
-}
-
-.portfolio-box .portfolio-layer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.services2 .services-box img{
+    padding: 1rem;
+    border-radius: 2rem;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: .5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer{
-    transform: translateY(0);
+
+.services2 .services-box h4{
+    font-size: 1.3rem;
+    padding: 0.3rem;
 }
 
-.portfolio-layer h4{
-    font-size: 3rem;
-}
 
-.portfolio-layer p{
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
-}
 
-.portfolio-layer a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    background: var(--text-color);
-    border-radius: 50%;
-}
 
-.portfolio-layer a i{
-    font-size: 2rem;
-    color: var(--second-bg-color);
-}
+
 
 .contact h2{
     margin-bottom: 3rem;
@@ -394,6 +291,23 @@ span{
     cursor: pointer;
 }
 
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
 .footer{
     display: flex;
     justify-content: space-between;
@@ -427,7 +341,7 @@ span{
     color: var(--second-bg-color);
 }
 
-/* BREAKPOOINTS(responsividade???) */
+/* BREAKPOOINTS */
 
 @media (max-width: 1200px){
     html{
@@ -448,7 +362,7 @@ span{
         padding-bottom: 7rem;
     }
 
-    .portfolio{
+    .services2{
         padding-bottom: 7rem;
     }
     .contact{
@@ -515,16 +429,22 @@ span{
         margin-bottom: 3rem;
     }
 
-    .portfolio h2{
+    .services2 h2{
         margin-bottom: 3rem;
     }
-    .portfolio-container{
+    .services-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services2 .services-container{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 617px){
-    .portfolio-container{
+    .services-container{
+        grid-template-columns: 1fr;
+    }
+    .services2 .services-container{
         grid-template-columns: 1fr;
     }
     .home-img img{
